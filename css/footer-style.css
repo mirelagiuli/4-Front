@@ -1,0 +1,17 @@
+/* CSS DO FOOTER*/
+
+.footer { /*container do footer*/
+	background-color: #ffffff;
+	box-shadow: 0 -1px 5px #545454;
+	display: block;	/*ou flex??*/
+	padding: 20px 0;
+	bottom: 0;
+}
+
+.site-info p {
+	color: black;
+	font-family: 'open sans';
+	font-weight: 500;
+	font-size: 16px;
+	text-align: center;
+}
