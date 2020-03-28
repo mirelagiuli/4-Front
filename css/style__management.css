@@ -29,6 +29,10 @@
     height: 100vh;
 }
 
+nav object{
+    width: 100%;
+}
+
 .container {
    display: flex;
    width: 100%;
@@ -55,6 +59,10 @@
 .container .response__management object {
     width: 100%;
     height: 100vh;    
+}
+
+footer object{
+    width: 100%;
 }
 
 @media only screen and (max-width: 900px) {

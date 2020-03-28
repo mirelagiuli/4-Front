@@ -22,18 +22,16 @@ html, body {
     background:  #ECECEC;
 }
 
-nav {
+nav object {
     position: absolute;
     top: 0;
     width: 100%;
-    height: 60px;
 }
 
-footer {
+footer object{
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 60px;
 }
 
 .container {
