@@ -2,24 +2,39 @@
 
 <html lang="pt-br">
 
+
 	<head>
 		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="css/header-style.css"></link>
 	</head>
 	
-	<body>
-		<header class="header-container">
-			<div class="header-left">
-				<h1 class="header-left__logo">4-Front</h1>
+	<body class="page">
+		<!-- Inicio header site -->
+		<header class="header page__header">
+			<!-- Logo da equipe do lado esquerdo -->
+			<div class="left-side header__left-side">
+				<h1 class="left-side__logo">
+					<!-- link para pag home-->
+					<a href="index.html">4-Front</a>
+				</h1>
 			</div>
-			<div class="header-right">
-				<nav>
+			<!-- Menu de navegação-->
+			<div class="right-side header__right-side">
+				<nav class="nav-bar right-side__nav-bar">
 					<ul>
-						<li class="header-right__nav"><a href="index.html">Home</a></li>
-						<li class="header-right__nav"><a href="about.html">Sobre</a></li>
-						<li class="header-right__nav"><a href="login.html">Login</a></li>
+						<li class="nav-bar__home-item">
+							<a target="_parent" href="index.html">Home</a>
+						</li>
+						<li class="nav-bar__about-item">
+							<a target="_parent" href="about.html">Sobre</a>
+						</li>
+						<li class="nav-bar__login-item">
+							<a target="_parent" href="login.html">Login</a>
+						</li>
 					</ul>
 				</nav>					
 			</div>		
 		</header>
+		<!-- Fim do Header site-->
 	</body>
 </html>

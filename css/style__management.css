@@ -1,0 +1,100 @@
+@font-face {
+    font-family: 'open_sansbold';
+    src: url('../media/fonts/OpenSans/opensans-bold-webfont.woff2') format('woff2'),
+         url('../media/fonts/OpenSans/opensans-bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sansregular';
+    src: url('../media/fonts/OpenSans/opensans-regular-webfont.woff2') format('woff2'),
+         url('../media/fonts/OpenSans/opensans-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sanssemibold';
+    src: url('../media/fonts/OpenSans/opensans-semibold-webfont.woff2') format('woff2'),
+         url('../media/fonts/OpenSans/opensans-semibold-webfont.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+.html, body {
+    background:  #ECECEC;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+nav object{
+    width: 100%;
+}
+
+.container {
+   display: flex;
+   width: 100%;
+   height: 100vh;
+}
+
+.container .user {
+    width: 25%;
+    height: 100vh;
+    margin: 5px;
+}
+
+.container .user object {
+    width: 100%;
+    height: 100vh;
+}
+
+.container .response__management {
+    width: 75%;
+    height: 100vh;
+    margin: 5px;
+}
+
+.container .response__management object {
+    width: 100%;
+    height: 100vh;    
+}
+
+footer object{
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    margin-top: 30px;
+}
+
+@media only screen and (max-width: 900px) {
+    .container {
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .container .user {
+        width: 90%;
+        height: auto;
+        margin: 0px auto;
+    }
+
+    .container .response__management{
+        width: 90%;
+        height: 100vh;
+        margin: -120px auto;
+    }
+
+    .container .response__management object {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .container .response__management{
+        margin: 0 auto;
+    }
+}
+
