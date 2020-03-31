@@ -1,39 +1,38 @@
 @font-face {
     font-family: 'open sans bold';
-    src: url('../media/fonts/opensans-bold-webfont.woff2') format('woff2'),
-         url('../media/fonts/opensans-bold-webfont.woff') format('woff');
+    src: url('../media/fonts/opensans-bold-webfont.woff2') format('woff2'), url('../media/fonts/opensans-bold-webfont.woff') format('woff');
     font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Open Sans Extra-bold';
-    src: url('../media/fonts/opensans-extrabold-webfont.woff2') format('woff2'),
-         url('../media/fonts/opensans-extrabold-webfont.woff') format('woff');
+    src: url('../media/fonts/opensans-extrabold-webfont.woff2') format('woff2'), url('../media/fonts/opensans-extrabold-webfont.woff') format('woff');
     font-weight: 900;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Open Sans Semi-bold';
-    src: url('../media/fonts/opensans-semibold-webfont.woff2') format('woff2'),
-         url('../media/fonts/opensans-semibold-webfont.woff') format('woff');
+    src: url('../media/fonts/opensans-semibold-webfont.woff2') format('woff2'), url('../media/fonts/opensans-semibold-webfont.woff') format('woff');
     font-weight: 500;
     font-style: normal;
 }
+
+
 /** Fim das configurções de fonte **/
 
-
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
-    background: #ECECEC;
+    background: rgb(236, 236, 236);
     margin: 0;
-	overflow-x: hidden;
+    overflow-x: hidden;
 }
 
-h2{
-    color: #30BF97;
+h2 {
+    color: rgb(48, 191, 151);
     font-family: 'Open Sans Bold';
 }
 
@@ -41,18 +40,22 @@ label {
     font-family: 'Open Sans';
 }
 
+
 /* Fim do CSS global (global pq alguns styles não estão aplicados apenas a uma tag específica) */
+
+
 /****************************************/
 
-.header { /*container do cabeçalho*/
-	background-color: #ffffff;
-	box-shadow: 0 1px 5px #545454;
-    margin-bottom: 50px;
+.header {
+    /*container do cabeçalho*/
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 1px 5px rgb(84, 84, 84);
+    margin-bottom: 30px;
 }
 
 .header a {
     font-size: 25px;
-    color: black;
+    color: rgb(0, 0, 0);
 }
 
 .header #link-brand {
@@ -70,24 +73,26 @@ label {
 
 .global-menu a:hover {
     text-decoration: none;
-    border: 3px solid #30BF97;
-    background: #30BF97;
+    border: 3px solid hsl(163, 60%, 47%);
+    background: rgb(48, 191, 151);
     border-radius: 25px;
 }
 
 .global-menu .login {
-    border: 3px solid #30BF97;
+    border: 3px solid rgb(48, 191, 151);
     border-radius: 25px;
 }
 
-/* Fim do CSS aplicado ao header da página */
-/**************************************************************************/
 
+/* Fim do CSS aplicado ao header da página */
+
+
+/**************************************************************************/
 
 .main--content {
     border-radius: 5px;
     border: 1px solid rgba(255, 255, 255, 0.25);
-    background-color: #fff;
+    background-color: rgb(255, 255, 255);
     padding: 32px;
 }
 
@@ -103,9 +108,9 @@ label {
 
 form .send--button {
     border: none;
-    background: #30BF97;
+    background: rgb(48, 191, 151);
     border-radius: 25px;
-    color: #fff;
+    color: rgb(255, 255, 255);
     font-size: 18px;
     font-family: 'open sans bold';
     padding: 0 25px;
@@ -115,7 +120,7 @@ form .send--button {
 .send--button:hover {
     text-decoration: none;
     background: rgb(37, 143, 113);
-    color: #fff;
+    color: rgb(255, 255, 255);
 }
 
 .cancel--button {
@@ -134,7 +139,6 @@ form .send--button {
     color: rgb(119, 119, 119);
 }
 
-
 .form--content__contact {
     border-radius: 5px;
     border: 3px solid rgba(185, 185, 185, 0.6);
@@ -151,16 +155,16 @@ form .send--button {
 }
 
 
-
 /* Style aplicado para o footer */
 
-.footer { /*container do footer*/
+.footer {
+    /*container do footer*/
     margin-top: 50px;
     margin-bottom: 0;
     padding: 15px;
-    background: #fff;
-    color: black;
-	font-family: 'Open Sans bold';
-	font-size: 16px;
-	text-align: center;
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-family: 'Open Sans bold';
+    font-size: 16px;
+    text-align: center;
 }
