@@ -3,72 +3,130 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style__default.css">
+
     <title>4-Front - Home</title>
-    <link rel="stylesheet" href="css/styleindex.css" type="text/css">
 </head>
 
 <body>
-    <nav>
-        <object type="text/html" data="header.html"></object>
-    </nav>
-    <main class="container">
-        <form>
-            <h2 id="title">Formulário de cadastro</h2>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg" id="responsiveButton">
+            <div class="container">
+                <!-- Logo da equipe do lado esquerdo -->
+                <!-- link para pag home-->
+                <a id="link-brand" class="navbar-brand" href="index.html">4-Front</a>
+
+                <!-- Menu de navegação-->
+                <div class="global-menu">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">Sobre</a>
+                    <a class="login" href="login.html">Login</a>	
+                </div>
+            </div>
+          </nav>
+    </header>
+    
+    <!-- Inicio do main content -->
+    <main>
+        <div class="container main--content">
+           
+            <h2>Novo Cadastro</h2>
             <hr>
-            <div class="box2">
-                <label class="label-form" for="nome">Nome:</label><br>
-                <input class="input-form" type="text" id="nome" name="nome" placeholder="Nome completo"><br>
-                <label class="label-form" for="email">Email:</label><br>
-                <input class="input-form" type="text" id="email" name="email" placeholder="Endereço de email"><br>
-                <label class="label-form" for="tel">Telefone:</label><br>
-                <input class="input-form" type="text" id="tel" name="tel" placeholder="Telefone">
-                <div>
-                    <p class="label-form">Assunto</p>
-                    <select id="assunto" name="assunto">
-                        <option>(vazio)</option>
-                    </select>
+
+            <form action="">
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-6">
+                        <div class="form--content form-group">
+                            <label for="nome">Nome:</label>    
+                            <input class="form-control" type="text" id="nome" placeholder="Nome completo">
+                        
+                            <label for="email">Email:</label>
+                            <input class="form-control" type="text" id="email" placeholder="Endereço de email">
+                            
+                            <label for="tel">Telefone:</label>
+                            <input class="form-control" type="text" id="tel" placeholder="Telefone">
+
+                            <label for="assunto">Assunto</label>
+                            <select id="assunto" class="form-control">
+                                <option>(vazio)</option>
+                            </select>
+                            
+                            <label for="conteudo">Conteúdo:</label>
+                            <textarea id="conteudo" rows="4" class="form-control"></textarea>
+                            
+                            <div id="buttons">
+                                <button class="btn cancel--button">Cancelar</button>
+                                <button class="btn send--button">Enviar</button>
+                            </div>
+                        </div>
+                    </div> 
+                    
+                    <div class="col-sm-12 col-md-12 col-lg-6">
+                        <div class="form--content__contact">
+                                    
+                            <h2>Informações de Contato</h2>
+                            <h3>Forma de contato:</h3>
+
+                            <div class="form-check">
+                                <input type="radio" id="email-contact" class="form-check-input" value="email">
+                                    <label for="email-contact"> Email </label>
+                            </div>
+                            
+                            <div class="form-check">
+                                <input type="radio" id="tel-contact" class="form-check-input" value="Telefone">
+                                <label for="tel-contact">Telefone</label>
+                            </div>
+
+                            <h3>Disponibilidade para contato:</h3>
+                                
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="input-comercial" value="comercial">
+                                <label class="form-check-label" for="input-comercial">Seg. a Sexta - horário comercial</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="input-manha" value="manha">
+                                <label class="form-check-label" for="input-manha">Seg. a Sexta - Período da manhã</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="input-tarde" value="tarde">
+                                <label class="form-check-label" for="input-tarde">Seg. a Sexta - Período da manhã</label>
+                            </div>
+                                    
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="input-noite" value="noite">
+                                <label class="form-check-label" for="input-noite">Seg. a Sexta - Período da tarde</label>
+                            </div>
+                                
+                            <div class="form-check">
+                                <div class="form-others">
+                                    <label for="text-input" class="form-check-label">Outros:</label>
+                                    <input class="form-control" type="text" id="text-input">                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <p class="label-form">Conteúdo:</p>
-                    <textarea name="conteudo" rows="5" cols="30"></textarea>
-                </div>
-                <div id="btn">
-                    <button type="submit">Enviar formulário</button>
-                </div>
-            </div>
-            <div>
-
-                <div class="box">
-                    <h2>Informações de contato</h2>
-                    <p class="sub-title">Forma de contato:</p>
-                    <input type="radio" id="contato_1" name="contato" value="email">
-                    <label for="contato_1"> Email </label><br>
-                    <input type="radio" id="contato_2" name="contato" value="Telefone">
-                    <label for="contato_2">Telefone</label><br>
-
-                    <p class="sub-title">Disponibilidade para contato:</p>
-                    <input class="input-2" type="checkbox" id="disp_1" name="disponibilidade" value="comercial">
-                    <label class="label-2" for="disp_1">Seg. a sexta - horário comercial</label><br>
-
-                    <input class="input-2" type="checkbox" id="disp_2" name="disponibilidade" value="manha">
-                    <label class="label-2" for=" disp_2">Seg. a sexta - período da manhã</label><br>
-
-                    <input class="input-2" type="checkbox" id="disp_3" name="disponibilidade" value="tarde">
-                    <label class="label-2" for=" disp_3">Seg. a sexta - período da tarde</label><br>
-
-                    <input class="input-2" type="checkbox" id="disp_4" name="disponibilidade" value="noite">
-                    <label class="label-2" for=" disp_4">Seg. a sexta - período da noite</label><br>
-
-                    <input type="checkbox" id="disp_5" name="disponibilidade" value="outros">
-                    <label for=" disp_5">Outros</label>
-                    <input type="text" id="text" name="disponibilidade"><br>
-                </div>
-            </div>
-
-        </form>
+            </form>
+        </div>
     </main>
-    <footer>
-        <object type="text/html" data="footer.html"></object>
+    <!-- Fim do main content -->
+
+    <footer class="footer">
+        <div class="">Projeto 3 - Integração com Questionário Online</div>
+        <div class=" footer-copyright text-muted">© 2020 4-Front - Todos os direitos reservados.</div>	
     </footer>
-</body>
+
+    <!-- JavaScript (Opcional) -->
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
 </html>
