@@ -1,37 +1,33 @@
 <!DOCTYPE html>
-
 <html lang="pt-br">
 
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<head>
-		<meta charset="utf-8">
-		<link rel="stylesheet" type="text/css" href="css/style__header.css"></link>
-	</head>
-	
-	<body class="page">
-		<!-- Inicio header site -->
-		<header class="header page__header">
-			<!-- Logo da equipe do lado esquerdo -->
-			<div class="left-side header__left-side">
-				<h1 class="left-side__logo">
-					<!-- link para pag home-->
-					<a href="index.html">4-Front</a>
-				</h1>
-			</div>
-			<!-- Menu de navegação-->
-			<div class="right-side header__right-side">
-				<nav class="nav-bar right-side__nav-bar">
-					<ul>
-						<li class="nav-bar__home-item"><a href="index.html"
-							target="_parent">Home</a></li>
-						<li class="nav-bar__about-item"><a href="about.html"
-							target="_parent">Sobre</a></li>
-						<li class="nav-bar__login-item"><a href="login.html"
-							target="_parent">Login</a></li>
-					</ul>
-				</nav>					
-			</div>		
-		</header>
-		<!-- Fim do Header site-->
-	</body>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style__default.css">
+</head>
+
+<body>
+    <!-- Inicio header site -->
+    <header class="header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <!-- Logo da equipe do lado esquerdo -->
+                <!-- link para pag home-->
+                <a id="link-brand" class="navbar-brand" href="index.html">4-Front</a>
+
+                <!-- Menu de navegação-->
+                <div class="global-menu">
+                    <a href="index.html" target="_parent">Home</a>
+                    <a href="about.html" target="_parent">Sobre</a>
+                    <a class="login" href="login.html" target="_parent">Login</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Fim do Header site-->
+</body>
+
 </html>
