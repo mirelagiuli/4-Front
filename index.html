@@ -7,7 +7,18 @@
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style__default.css">
-    <script language="JavaScript" src="js/form.js"></script>
+    <script language="JavaScript" src="js/functions.js"></script>
+    <style type="text/css">
+        .message {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .message.error {
+            color: red;
+            font-size: 14px;
+            font-weight: 600;
+        }
+    </style>
 
     <title>4-Front - Home</title>
 </head>
@@ -37,7 +48,7 @@
             <h2>Novo Cadastro</h2>
             <hr>
 
-            <form action="" name="form" onSubmit="return validaForm();">
+            <form action="" name="form" onSubmit="sendForm()">
                 <div class="row">
                     <div class="col-sm-12 col-md-12 col-lg-6">
                         <div class="form--content form-group">
@@ -46,7 +57,7 @@
 
                             <label for="email">Email:</label>
                             <input class="form-control" type="text" id="email" placeholder="Endereço de email">
-
+                            <br>
                             <label for="tel">Telefone:</label>
                             <input class="form-control" type="text" id="tel" placeholder="Telefone">
 
@@ -60,7 +71,7 @@
 
                             <div id="buttons">
                                 <button class="btn cancel--button">Cancelar</button>
-                                <button type="submit" onclick="enviar()" class="btn send--button">Enviar</button>
+                                <button type="submit" class="btn send--button">Enviar</button>
                             </div>
                         </div>
                     </div>
