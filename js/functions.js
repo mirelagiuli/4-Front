@@ -30,6 +30,7 @@ function sendForm() {
 	if (form["phone"].value == "" || form["phone"].value == null) {
 			msgBox.innerHTML = ("Por favor, preencha seu número de telefone.");
 			msgBox.classList.add('error')
+			form.focus();
 			return false;		
 	}
 

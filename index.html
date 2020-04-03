@@ -7,7 +7,7 @@
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style__default.css">
-    <script language="JavaScript" src="js/functions.js"></script>
+    <script language="JavaScript" src="./js/functions.js"></script>
     <style type="text/css">
         .message {
             margin-left: auto;
@@ -48,26 +48,41 @@
             <h2>Novo Cadastro</h2>
             <hr>
 
+<<<<<<< HEAD
             <form action="" name="form" onSubmit="sendForm()">
+=======
+            <div class="message">
+            	
+            </div>
+
+            <form action="" name="form-Index" id="form-Index" onsubmit="return sendForm();">
+>>>>>>> 68eee524e86fc6d21bad5f4ef21ff2bf62b598ae
                 <div class="row">
                     <div class="col-sm-12 col-md-12 col-lg-6">
                         <div class="form--content form-group">
-                            <label for="nome">Nome:</label>
-                            <input class="form-control" type="text" id="nome" placeholder="Nome completo">
+                            <label for="name">Nome:</label>
+                            <input class="form-control" type="text" name="name" id="name" placeholder="Nome completo">
 
                             <label for="email">Email:</label>
+<<<<<<< HEAD
                             <input class="form-control" type="text" id="email" placeholder="Endereço de email">
                             <br>
                             <label for="tel">Telefone:</label>
                             <input class="form-control" type="text" id="tel" placeholder="Telefone">
+=======
+                            <input class="form-control" type="text" name="email" id="email" placeholder="Endereço de email">
 
-                            <label for="assunto">Assunto</label>
-                            <select id="assunto" class="form-control">
-                                <option>(vazio)</option>
+                            <label for="phone">Telefone:</label>
+                            <input class="form-control" type="tel" name="phone" id="phone" placeholder="Telefone">
+>>>>>>> 68eee524e86fc6d21bad5f4ef21ff2bf62b598ae
+
+                            <label for="subject">Assunto</label>
+                            <select name="subject" id="subject" class="form-control">
+                                <option value="">Selecione um assunto</option>
                             </select>
 
-                            <label for="conteudo">Conteúdo:</label>
-                            <textarea id="conteudo" rows="4" class="form-control"></textarea>
+                            <label for="msg-content">Conteúdo:</label>
+                            <textarea name="msg-content" id="msg-content" rows="4" class="form-control"></textarea>
 
                             <div id="buttons">
                                 <button class="btn cancel--button">Cancelar</button>
