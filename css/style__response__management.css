@@ -41,7 +41,7 @@ html, body {
     font-family: 'open_sanssemibold', sans-serif;
 }
 
-.container .management__title h3 {
+.container .title h3 {
     color: #30BF97;
     padding: 10px 0 5px 0;
     font-family: 'open_sansbold', sans-serif;

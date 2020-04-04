@@ -7,6 +7,18 @@
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style__default.css">
+    <script language="JavaScript" src="./js/functions.js"></script>
+    <style type="text/css">
+        .message {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .message.error {
+            color: red;
+            font-size: 14px;
+            font-weight: 600;
+        }
+    </style>
 
     <title>4-Front - Home</title>
 </head>
@@ -36,30 +48,34 @@
             <h2>Novo Cadastro</h2>
             <hr>
 
-            <form action="">
+            <div class="message">
+            	
+            </div>
+
+            <form action="" name="form-Index" id="form-Index" onsubmit="return sendForm();">
                 <div class="row">
                     <div class="col-sm-12 col-md-12 col-lg-6">
                         <div class="form--content form-group">
-                            <label for="nome">Nome:</label>
-                            <input class="form-control" type="text" id="nome" placeholder="Nome completo">
+                            <label for="name">Nome:</label>
+                            <input class="form-control" type="text" name="name" id="name" placeholder="Nome completo">
 
                             <label for="email">Email:</label>
-                            <input class="form-control" type="text" id="email" placeholder="Endereço de email">
+                            <input class="form-control" type="text" name="email" id="email" placeholder="Endereço de email">
 
-                            <label for="tel">Telefone:</label>
-                            <input class="form-control" type="text" id="tel" placeholder="Telefone">
+                            <label for="phone">Telefone:</label>
+                            <input class="form-control" type="tel" oninput="masktelefone(this, 'tel')" name="phone" id="phone" placeholder="Telefone">
 
-                            <label for="assunto">Assunto</label>
-                            <select id="assunto" class="form-control">
-                                <option>(vazio)</option>
+                            <label for="subject">Assunto</label>
+                            <select name="subject" id="subject" class="form-control">
+                                <option value="">Selecione um assunto</option>
                             </select>
 
-                            <label for="conteudo">Conteúdo:</label>
-                            <textarea id="conteudo" rows="4" class="form-control"></textarea>
+                            <label for="msg-content">Conteúdo:</label>
+                            <textarea name="msg-content" id="msg-content" rows="4" class="form-control"></textarea>
 
                             <div id="buttons">
                                 <button class="btn cancel--button">Cancelar</button>
-                                <button class="btn send--button">Enviar</button>
+                                <button type="submit" class="btn send--button">Enviar</button>
                             </div>
                         </div>
                     </div>
@@ -71,12 +87,14 @@
                             <h3>Forma de contato:</h3>
 
                             <div class="form-check">
-                                <input type="radio" id="email-contact" class="form-check-input" value="email">
+                                <input type="radio" name="conta" id="email-contact" class="form-check-input"
+                                    value="email">
                                 <label for="email-contact"> Email </label>
                             </div>
 
                             <div class="form-check">
-                                <input type="radio" id="tel-contact" class="form-check-input" value="Telefone">
+                                <input type="radio" name="conta" id="tel-contact" class="form-check-input"
+                                    value="Telefone">
                                 <label for="tel-contact">Telefone</label>
                             </div>
 
@@ -84,22 +102,26 @@
 
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" id="input-comercial" value="comercial">
-                                <label class="form-check-label" for="input-comercial">Seg. a Sexta - horário comercial</label>
+                                <label class="form-check-label" for="input-comercial">Seg. a Sexta - horário
+                                    comercial</label>
                             </div>
 
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" id="input-manha" value="manha">
-                                <label class="form-check-label" for="input-manha">Seg. a Sexta - Período da manhã</label>
+                                <label class="form-check-label" for="input-manha">Seg. a Sexta - Período da
+                                    manhã</label>
                             </div>
 
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" id="input-tarde" value="tarde">
-                                <label class="form-check-label" for="input-tarde">Seg. a Sexta - Período da manhã</label>
+                                <label class="form-check-label" for="input-tarde">Seg. a Sexta - Período da
+                                    manhã</label>
                             </div>
 
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" id="input-noite" value="noite">
-                                <label class="form-check-label" for="input-noite">Seg. a Sexta - Período da tarde</label>
+                                <label class="form-check-label" for="input-noite">Seg. a Sexta - Período da
+                                    tarde</label>
                             </div>
 
                             <div class="form-check">
@@ -122,7 +144,6 @@
             <div class=" footer-copyright text-muted">© 2020 4-Front - Todos os direitos reservados.</div>
         </div>
     </footer>
-
 </body>
 
 </html>

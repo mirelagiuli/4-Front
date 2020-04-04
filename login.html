@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/style__login.css">
 
     <script src="https://kit.fontawesome.com/a24efc79cd.js" crossorigin="anonymous"></script>
+    <script src="js/functions.js"></script>
 
     <title>4-Front - Login</title>
 </head>
@@ -27,7 +28,7 @@
                 <p class="incorrect">Usuário e/ou senha incorretos.</p>
             </div>
             <div class="login__form">
-                <form action="">
+                <form action="management.html" method="get" onsubmit="return validaLogin(this);">
                     <div class="required">
                         <p>* Esse campo é de preenchimento obrigatório.</p>
                     </div>
