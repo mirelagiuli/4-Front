@@ -18,7 +18,7 @@ function sendForm() {
 
 	//Validação EMAIL
 	if (form["email"].value.indexOf("@") == -1 || 
-		form["email"].valueOf.indexOf(".") == -1 ||
+		form["email"].value.indexOf(".") == -1 ||
 		form["email"].value == "" || form["email"].value == null) {
 			msgBox.innerHTML = ("Por favor, preencha com um email válido.");
 			msgBox.classList.add('error')
@@ -34,34 +34,54 @@ function sendForm() {
 			return false;		
 	}
 
-	//Validação assunto
-
 	//Validação Conteúdo
-	if (form["subject"].value == "" || form["subject"].value == null) {
+	if (form["msg-content"].value == "" || form["msg-content"].value == null) {
 			msgBox.innerHTML = ("Por favor, escreva uma mensagem.");
 			msgBox.classList.add('error')
 			form.focus();
 			return false;
 	}
 
-	//Máscara de Telefone
-
 	//Validação Forma de Contato
-  	if (document.form.conta[0].checked == false
-    	&& document.form.conta[1].checked == false) {
-   		alert('Por favor, selecione o campo forma de contato.');
+  	if (form["conta"][0].checked == false
+    	&& form["conta"][1].checked == false) {
+ 		msgBox.innerHTML = ("Por favor, selecione o campo forma de contato.");
+		msgBox.classList.add('error')
+		form.focus();
     	return false;
     }
 
 
     //Validação Disponibilidade para Contato
-  	if (document.getElementById('input-comercial').checked == false &&
-    	document.getElementById('input-manha').checked == false &&
-    	document.getElementById('input-tarde').checked == false &&
-    	document.getElementById('input-noite').checked == false &&
-    	document.getElementById('text-input').value == "") {
-    	alert('Por favor, selecione o campo disponibilidade de contato.');
-    	return false;
+  	if (form["input-comercial"].checked == false &&
+    	form["input-manha"].checked == false &&
+    	form["input-tarde"].checked == false &&
+    	form["input-noite"].checked == false &&
+    	form["text-input"].value == "") {
+ 		msgBox.innerHTML = ("Por favor, selecione o campo disponibilidade de contato.");
+		msgBox.classList.add('error')
+		form.focus();
+		return false;
+    }
+}
+
+//Máscara de Telefone
+function masktelefone(n, t) {
+    var v = n.value;
+    if (isNaN(v[v.length - 1])) {
+        n.value = v.substring(0, v.length - 1);
+        return;
+    }
+    if (t === "tel") {
+        if (v.length === 1) n.value = "(" + n.value;
+        if (v.length === 3) n.value += ") ";
+        if (v[5] == 9) {
+            n.setAttribute("maxlength", "15");
+            if (v.length === 10) n.value += "-";
+        } else {
+            n.setAttribute("maxlength", "14");
+            if (v.length === 9) n.value += "-";
+        }
     }
 }
 
