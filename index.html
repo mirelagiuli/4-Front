@@ -63,7 +63,7 @@
                             <input class="form-control" type="text" name="email" id="email" placeholder="Endereço de email">
 
                             <label for="phone">Telefone:</label>
-                            <input class="form-control" type="tel" name="phone" id="phone" placeholder="Telefone">
+                            <input class="form-control" type="tel" oninput="masktelefone(this, 'tel')" name="phone" id="phone" placeholder="Telefone">
 
                             <label for="subject">Assunto</label>
                             <select name="subject" id="subject" class="form-control">
